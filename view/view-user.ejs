@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/view_style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+
+    <title>View</title>
+</head>
+<body>
+    <div class="container">
+    <% userView.forEach((item) => { %>
+    <table class="table table-responsive table-stiped" id="tbl">
+        <thead>
+            <tr>
+                <th>Full Name:</th>
+                <th>Email Address:</th>
+                <th>Your Age:</th>
+                <th>Your Address:</th>
+                <th>Your Gender:</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><%=item.fullname%></td>
+                <td><%=item.email%></td>
+                <td><%=item.age%></td>
+                <td><%=item.address%></td>
+                <td><%=item.gender%></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-warning">Go to List</a>
+    <a href="/edit/<%=item.id%>" class="btn btn-warning">Edit Here</a>
+    <% })%>
+</div>
+</body>
+</html>

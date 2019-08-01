@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-4.3.1/dist/css/bootstrap.css">
+    <script src="css/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="css/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>List of Users</title>
+</head>
+
+<body>
+    <div class="container">
+    <div>
+        <a href="/add" class="btn btn-success" style="margin-left:55%; margin-top: 90px;">Add New User</a>
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>    
+        </thead>
+
+        <tbody>
+            <% userList.forEach((item) => { %>
+            <tr>
+                <td><%=item.fullname%></td>
+                <td><%=item.email%></td>
+                <td><%=item.age%></td>
+                <td><%=item.address%></td>
+                <td><%=item.gender%></td>
+                <td><a href="/view/<%=item.id%>">View</a></td>
+                <td><a href="/edit/<%=item.id%>">Edit</a></td>
+                <!-- <td><a href="/delete/<%=item.id%>"onclick="return confirm('Are you sure?')">Delete Record</a></td> -->
+                <td><a href="/delete/<%=item.id%>" class="confirm-delete">Remove</a></td>
+                
+            </tr>
+            <% }) %>
+
+        </tbody>
+    </table>
+    </div>
+    <ul class="pagination page-item page-link">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </div>
+    
+</body>
+</html>

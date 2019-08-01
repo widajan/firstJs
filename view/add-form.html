@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-4.3.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="css/bootstrap-4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="css/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Javascript Web-page</title>
+</head>
+<body>
+    <div class="container">
+    <h2 id="head1">Registration Form</h2>
+    <form action="/submitForm" method="POST" id="frm">
+
+        <div class="form-group col-md-7 ">
+            <label for="name">Enter your name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter full name" name="name">
+        </div> 
+
+        <div class="form-group col-lg-7">
+            <label for="email">Enter your Email:</label>
+            <input type="text" name="email" id="email" placeholder="Your email" class="form-control">
+        </div>
+
+        <div class="form-group col-lg-7">
+            <label for="age">Enter your age:</label>
+            <input type="text" name="age" id="age" class="form-control" placeholder="Age here">
+        </div>
+
+        <div class="form-group col-lg-7">
+            <label for="address">Enter your address:</label>
+            <input type="text" name="address" id="address" class="form-control" placeholder="Address here">
+        </div>
+
+    <div class="form-group col-lg-2">
+        <label for="gen">Select Gender:</label>
+        <select class="form-control" id="sel1" name="gender">
+            <option class="default">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+
+        </select>
+    </div>
+
+    <div id="btn">
+        <button type="submit" class="btn btn-primary col-lg-1">Submit</button>
+
+        <a href="/" class="btn btn-warning">Go to List</a>
+    </div>
+    
+    </form>
+</div>
+</body>
+</html>
